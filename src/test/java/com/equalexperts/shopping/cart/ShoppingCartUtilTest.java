@@ -19,14 +19,14 @@ public class ShoppingCartUtilTest {
 		assertThat(0.57,equalTo(ShoppingCartUtil.roundUpAmount(0.567)));
 		assertThat(0.56,equalTo(ShoppingCartUtil.roundUpAmount(0.564)));
 		
-		assertThat(0.56,equalTo(ShoppingCartUtil.roundUpAmount(0.565)));
+		assertThat(0.57,equalTo(ShoppingCartUtil.roundUpAmount(0.565)));
 	}
 	
 	@Test
 	public void testCalculateTaxOnTotalAmount(){
 		double totalAmount = 279.96;
 		double taxAmount = ShoppingCartUtil.calculateTaxOnTotalAmount(totalAmount);
-		double expacted = 34.99;
+		double expacted = 35.00;
 		assertThat(taxAmount, equalTo(expacted));
 		
 	}
@@ -35,7 +35,7 @@ public class ShoppingCartUtilTest {
 	public void testcalculatePaybleAmount(){
 		double totalAmount = 279.96;
 		double paybleAmount = ShoppingCartUtil.calculatePaybleAmount(totalAmount);
-		double expacted = 314.95;
+		double expacted = 314.96;
 		assertThat(paybleAmount, equalTo(expacted));
 	}
 

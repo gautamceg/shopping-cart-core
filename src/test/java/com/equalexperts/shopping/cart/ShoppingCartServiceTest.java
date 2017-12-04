@@ -64,7 +64,7 @@ public class ShoppingCartServiceTest {
 		double totalAmount = target.addProduct(product2, 2);
 		double taxAmount = ShoppingCartUtil.calculateTaxOnTotalAmount(totalAmount);
 		double paybleAmount = ShoppingCartUtil.calculatePaybleAmount(totalAmount);
-		double expected = 314.95;
+		double expected = 314.96;
 		assertThat(paybleAmount, equalTo(expected));
 	}
 	
