@@ -20,6 +20,7 @@ public class ShoppingCartUtilTest {
 		assertThat(0.56,equalTo(ShoppingCartUtil.roundUpAmount(0.564)));
 		
 		assertThat(0.57,equalTo(ShoppingCartUtil.roundUpAmount(0.565)));
+		assertThat(100.57,equalTo(ShoppingCartUtil.roundUpAmount(100.5658970)));
 	}
 	
 	@Test

@@ -25,25 +25,7 @@ public class ShoppingCartService {
 		return false;
 	}
 	
-	public double addProduct(Product product, int unit){
-		double totalAmount = 0;
-		if(product !=null && unit > 0){
-			shoppingCart.addProductToCart(product, unit);
-			totalAmount = calculateTotalPrice(shoppingCart.getCartProducts());
-			return totalAmount;
-		}
-		return totalAmount;
-	}
 	
-	private double calculateTotalPrice(Map<Product,Integer> cartProducts){
-		double totalPrice = 0;
-		if(cartProducts != null){
-			for(Entry<Product,Integer> entry : cartProducts.entrySet()){
-				totalPrice = totalPrice + entry.getKey().getUnitPrice() * entry.getValue();
-			}
-			totalPrice = ShoppingCartUtil.roundUpAmount(totalPrice);
-		}
-		return totalPrice;
-	}
+
 	
 }
